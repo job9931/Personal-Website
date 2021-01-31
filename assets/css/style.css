@@ -1,14 +1,24 @@
+/* Colours as global variables */
+:root {
+  --black: #282828;
+  --pink: #ffb3b3;
+  --lightgrey:#F0F0F0;
+  --hover_background: #ddd;
+  --hover_text: #fff6ea;
+}
+
+
 /* Add a black background color to the top navigation */
 .navbar {
 	border: 3px solid #000000;
 	border-radius: 15px;
-    background-color: #282828;
+    background-color: var(--black);
 	text-align: center;
     overflow: hidden;
 }
 /* Style the links inside the navigation bar */
 .topnav a {
-  color: #F0F0F0;
+  color: var(--lightgrey);
   text-align: center;
   padding: 14px 16px;
   display: inline-block;
@@ -19,15 +29,25 @@
 }
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
-  color: #fff6ea;
+  background-color: var(--hover_background);
+  color: var(--hover_text);
 }
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #282828;
-  color: #ffb3b3;
+  background-color: var(--black);
+  color: var(--pink);
 }
 
+/* Standard paragraph formatting */
+p {
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.highlight {
+	color: #ffb3b3
+}
 
 /* Welcome text on index page */
 .welcome_text {
@@ -37,13 +57,20 @@
 	transform: translate(-50%, -50%);
     width: 600px;
     height: 200px;
-
 	text-align: center;
 	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 
-}​
-.welcome_text #welcome_message {
-  background-color: yellow;
 }
-	  
-	
+
+.welcome_message {
+	font-size: 42px;
+}
+
+/* Edit home page image */
+img.my_image {
+	display: inline-block;
+	border-radius: 50%;
+	width:20em; 
+	height:20em;
+	vertical-align: bottom;
+}
